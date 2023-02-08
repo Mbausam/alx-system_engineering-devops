@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -name "*.html" -type f -exec sh -c 'src="$1"; dest="../`basename "${src}"`"; [ ! -e "$dest" -o "$src" -nt "$dest" ] && echo "Copying $src to $dest" && cp "$src" "$dest"' _ {} \;
+rsync -av --ignore-existing --update *.html ../
