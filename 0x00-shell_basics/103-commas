@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -A --group-directories-first --sort=alph --format=commas | tr '/' ','
